@@ -1,0 +1,26 @@
+name: Node run npm command action
+
+inputs:
+  service-name:
+    required: true
+    type: string
+  command:
+    required: true
+    type: string
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4
+      with:
+        cache-dependency-path: package-lock.json
+        node-version: "23"
+
+    - name: Install dependencies
+      shell: bash
+      run: npm ci
+
+    - name: Run command
+      shell: bash
+      run: npm run --workspace=${{ inputs.service-name }} ${{ inputs.command }}

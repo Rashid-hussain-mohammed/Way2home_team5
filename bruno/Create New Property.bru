@@ -1,0 +1,31 @@
+meta {
+  name: Create New Property
+  type: http
+  seq: 8
+}
+
+post {
+  url: http:localhost:5000/properties
+  body: json
+  auth: bearer
+}
+
+body:json {
+  {
+    "landlordId": "e84955e7-c69a-4e08-ae96-b8d843f9f9cc",
+    "name": "Modern Student Apartment in Frankfurt",
+    "location": "Frankfurt",
+    "description": "A modern apartment designed specifically for students, located in the vibrant city of Fulda.",
+    "type": "Apartment",
+    "coldRent": 800,
+    "additionalCosts": 150,
+    "deposit": 1600,
+    "availabilityFrom": "2024-01-15T10:00:00Z",
+    "availabilityTo": "2024-12-31T10:00:00Z",
+    "size": 45,
+    "isHidden": false,
+    "arePetsAllowed": false,
+    "mediaFileIds": ["imageid"
+    ]
+  }
+}

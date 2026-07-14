@@ -1,0 +1,15 @@
+meta {
+  name: Moderator - get property by ID
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://localhost:5000/review/property/251e49c5-999f-4246-bf86-f4dfc3338ef0
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmY2NkYmFhZS1hNmQxLTRjM2QtYTQ2NS1lN2Y0NjAzOWQ5OTMiLCJlbWFpbCI6Im1haXJhQGdtYWlsLmNvbSIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzM2MzY4MDc3LCJleHAiOjE3MzYzNzE2Nzd9.rag62NN9wC_DkfAgPbGXYNBIsB6e7KmIvCa9-oW2gS4
+}

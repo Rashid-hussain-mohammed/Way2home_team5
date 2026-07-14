@@ -1,0 +1,17 @@
+meta {
+  name: get chat
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{HOST}}/chat/:currentUser/:otherUser/:property
+  body: multipartForm
+  auth: none
+}
+
+params:path {
+  property: 02e9c7a3-e1f2-434d-83b5-3c6909075114
+  otherUser: 0f0d67d9-a721-4175-8883-bd9da42d0cf8
+  currentUser: 0ac39648-ca67-449b-875f-f67e15be3eca
+}

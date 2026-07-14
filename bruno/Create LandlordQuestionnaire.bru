@@ -1,0 +1,48 @@
+meta {
+  name: Create LandlordQuestionnaire
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{HOST}}/questionnaire/landlord
+  body: json
+  auth: bearer
+}
+
+body:json {
+  {
+    "id": "1",
+    "creationDate": "2024-12-07T10:00:00Z",
+    "landlordId": "2",
+    "questions": [
+      {
+        "question": "Do you smoke inside your living space?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "correctAnswerIndex": 1,
+        "score": 5
+      },
+      {
+        "question": "Have you ever had any issues with previous landlords?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "correctAnswerIndex": 1,
+        "score": 15
+      },
+      {
+        "question": "Do you have a stable source of income?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "correctAnswerIndex": 0,
+        "score": 20
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Check if the user has already taken Questionnaire
+  type: http
+  seq: 16
+}
+
+get {
+  url: http://localhost:5000/questionnaire/tennat/:propertyId/:userId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  propertyId: 
+  userId: 
+}

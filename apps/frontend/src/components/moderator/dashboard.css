@@ -1,0 +1,9 @@
+.dashboard-table-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-table-item:hover {
+    background-color: rgb(213, 203, 181);
+    transform: scale(1.01);
+}

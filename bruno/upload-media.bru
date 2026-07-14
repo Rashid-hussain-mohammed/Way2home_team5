@@ -1,0 +1,15 @@
+meta {
+  name: upload media
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HOST}}/media
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: @file(../apps/backend/public/profiles/images/cat.jpg)
+}

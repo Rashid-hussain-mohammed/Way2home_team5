@@ -1,0 +1,39 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+        "build": {
+            "outputs": [
+                "dist/**"
+            ],
+            "dependsOn": [
+                "@gdsd/common#build-common"
+            ]
+        },
+        "build-common": {
+            "outputs": [
+                "dist/**"
+            ]
+        },
+        "check-types": {
+            "dependsOn": [
+                "^check-types"
+            ]
+        },
+        "dev": {
+            "persistent": true,
+            "cache": false,
+            "dependsOn": [
+                "@gdsd/common#build-common"
+            ]
+        },
+        "mikro-orm": {
+            "cache": false
+        }
+    },
+    "globalEnv": [
+        "BACKEND_PORT",
+        "BLOB_STORAGE",
+        "DB_CONNECTION",
+        "NODE_ENV"
+    ]
+}

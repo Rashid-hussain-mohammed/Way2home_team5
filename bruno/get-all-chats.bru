@@ -1,0 +1,15 @@
+meta {
+  name: get all chats
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{HOST}}/chat/:user
+  body: multipartForm
+  auth: none
+}
+
+params:path {
+  user: 0ac39648-ca67-449b-875f-f67e15be3eca
+}

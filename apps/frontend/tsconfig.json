@@ -1,0 +1,17 @@
+{
+  "extends": "@gdsd/typescript-config/react.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+    },
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

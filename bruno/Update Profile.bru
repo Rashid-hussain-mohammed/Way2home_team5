@@ -1,0 +1,27 @@
+meta {
+  name: Update Profile
+  type: http
+  seq: 14
+}
+
+put {
+  url: http://localhost:5000/profile/fccdbaae-a6d1-4c3d-a465-e7f46039d993
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmY2NkYmFhZS1hNmQxLTRjM2QtYTQ2NS1lN2Y0NjAzOWQ5OTMiLCJlbWFpbCI6Im1haXJhQGdtYWlsLmNvbSIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzM2NjQ1OTYyLCJleHAiOjE3MzY2NDk1NjJ9.bL6ny2QazEBowTy5Qvzq2U6qgt-dOhEmqN5_iip2IX8
+}
+
+body:json {
+  {"firstName": "Mairam",
+      "lastName": "Shafi",
+      "email": "maira@gmail.com",
+      "gender": "Female",
+      "birthDate": "2024-12-30T00:00:00.000Z",
+      "phone": "03362278422",
+      "role": "Student",
+      "about": "I AM MAIRA shafi"
+  }
+}

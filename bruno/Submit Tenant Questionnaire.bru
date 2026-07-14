@@ -1,0 +1,24 @@
+meta {
+  name: Submit Tenant Questionnaire
+  type: http
+  seq: 15
+}
+
+post {
+  url: http://localhost:5000/questionnaire/tenant/submit
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "landlordQuestionnaireId": "854b6e0b-b84a-41e1-ab8b-53bde0e67e68",
+    "userId": "357a25cf-e44c-4db6-9a14-b7f33cb7ab26",
+    "answers": [0, 1]
+  }
+  
+}

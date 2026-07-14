@@ -1,0 +1,19 @@
+meta {
+  name: remove from favorites
+  type: http
+  seq: 12
+}
+
+delete {
+  url: {{HOST}}/favorites/:propertyId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  propertyId: 1edc8560-3309-4962-829d-382192f53177
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0ZTBkYzYzMC0zZjBlLTRkYmEtYWRjYS0xMTBiNjA0Zjc5OGUiLCJlbWFpbCI6InJvbWluYS5uaWthc2FAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQiLCJpYXQiOjE3MzQ2MzMwNTcsImV4cCI6MTczNDYzNjY1N30.aHn6mYdFFdZQThtiRYtuN4f_ibRfEQq06VmEMCOrPdw
+}

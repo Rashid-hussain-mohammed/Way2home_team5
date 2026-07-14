@@ -1,0 +1,30 @@
+{
+    "name": "@gdsd/common",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "./models": "./dist/models/index.js",
+        "./*": "./dist/*.js"
+    },
+    "scripts": {
+        "build-common": "tsup src/* src/models/* --dts",
+        "lint": "eslint . --max-warnings 0",
+        "check-types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@gdsd/eslint-config": "*",
+        "@gdsd/typescript-config": "*",
+        "@types/eslint": "^8.56.5",
+        "@types/find-config": "^1.0.4",
+        "@types/node": "^20.11.24",
+        "eslint": "^9.15.0",
+        "tsup": "^8.3.5",
+        "typescript": "5.5.4"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "find-config": "^1.0.0"
+    }
+}

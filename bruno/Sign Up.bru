@@ -1,0 +1,26 @@
+meta {
+  name: Sign Up
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:5000/auth/signup
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "firstName": "Sara",
+    "lastName": "John",
+    "email": "sarajohn@fuldauni.com",
+    "password": "HashedPassword",
+    "gender": "Female",
+    "birthDate": "1995-07-01",
+    "phone": "+1234567890",
+    "avatar": "imageidoftheavatar",
+    "role": "Landlord",
+    "about": "Software Development uni student with a passion for coding."
+  }
+}

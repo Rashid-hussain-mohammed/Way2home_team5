@@ -1,0 +1,18 @@
+meta {
+  name: get properties
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:5000/properties?query=straße
+  body: json
+  auth: none
+}
+
+params:query {
+  query: straße
+  ~minPrice: 1000
+  ~maxPrice: 2000
+  ~propertyStatus: 
+}

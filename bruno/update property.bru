@@ -1,0 +1,26 @@
+meta {
+  name: Update Property
+  type: http
+  seq: 14
+}
+
+patch {
+  url: http://localhost:5000/properties/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 604fd847-572d-4c82-ad07-e7ee285e1ba7
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YmVmNGU0OC04ZDVlLTQ4ZGItYjQ0OC04YTU3ODkzNGEyYzIiLCJlbWFpbCI6InJvbWluaWtpQGZ1bGRhdW5pLmNvbSIsInJvbGUiOiJMYW5kbG9yZCIsImlhdCI6MTczNjE2NDQxOSwiZXhwIjoxNzM2MTY4MDE5fQ.IKrqD--B5ZWzbgtEc6R3R7l1U2bGYlAAFRdVKQXcOMY
+}
+
+body:json {
+  {
+    "size": "100",
+    "name": ""
+  }
+}

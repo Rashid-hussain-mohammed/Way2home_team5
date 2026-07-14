@@ -1,0 +1,1201 @@
+{
+  "namespaces": [],
+  "tables": [
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "amenity_name": {
+          "name": "amenity_name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        }
+      },
+      "name": "amenity",
+      "indexes": [
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "CURRENT_TIMESTAMP",
+          "mappedType": "datetime"
+        },
+        "landlord_id": {
+          "name": "landlord_id",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "questions": {
+          "name": "questions",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "json"
+        }
+      },
+      "name": "landlord_questionnaire",
+      "indexes": [
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "default": "CURRENT_TIMESTAMP",
+          "mappedType": "datetime"
+        },
+        "landlord_questionnaire_id": {
+          "name": "landlord_questionnaire_id",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "property_id": {
+          "name": "property_id",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "answers": {
+          "name": "answers",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "json"
+        },
+        "tenant_score": {
+          "name": "tenant_score",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        }
+      },
+      "name": "tenant_questionnaire",
+      "indexes": [
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "gender": {
+          "name": "gender",
+          "type": "enum('Female','Male','Other')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "enumItems": [
+            "Female",
+            "Male",
+            "Other"
+          ],
+          "mappedType": "enum"
+        },
+        "birth_date": {
+          "name": "birth_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "phone": {
+          "name": "phone",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "role": {
+          "name": "role",
+          "type": "enum('Landlord','Student','Moderator','Admin')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "enumItems": [
+            "Landlord",
+            "Student",
+            "Moderator",
+            "Admin"
+          ],
+          "mappedType": "enum"
+        },
+        "about": {
+          "name": "about",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        }
+      },
+      "name": "user",
+      "indexes": [
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "query": {
+          "name": "query",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "location": {
+          "name": "location",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "type": {
+          "name": "type",
+          "type": "enum('Apartment','House','SharedApartment','SharedHouse')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "enumItems": [
+            "Apartment",
+            "House",
+            "SharedApartment",
+            "SharedHouse"
+          ],
+          "mappedType": "enum"
+        },
+        "status": {
+          "name": "status",
+          "type": "enum('Pending','Approved','Rejected')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "default": "'Pending'",
+          "enumItems": [
+            "Pending",
+            "Approved",
+            "Rejected"
+          ],
+          "mappedType": "enum"
+        },
+        "max_rent": {
+          "name": "max_rent",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "min_rent": {
+          "name": "min_rent",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "deposit": {
+          "name": "deposit",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "availability_from": {
+          "name": "availability_from",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "availability_to": {
+          "name": "availability_to",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "min_size": {
+          "name": "min_size",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "max_size": {
+          "name": "max_size",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "are_pets_allowed": {
+          "name": "are_pets_allowed",
+          "type": "tinyint(1)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 1,
+          "mappedType": "boolean"
+        },
+        "search_preferences_id": {
+          "name": "search_preferences_id",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "amenities_values": {
+          "name": "amenities_values",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "json"
+        }
+      },
+      "name": "new_search_history",
+      "indexes": [
+        {
+          "columnNames": [
+            "user_id"
+          ],
+          "composite": false,
+          "keyName": "new_search_history_user_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "new_search_history_user_id_foreign": {
+          "constraintName": "new_search_history_user_id_foreign",
+          "columnNames": [
+            "user_id"
+          ],
+          "localTableName": "new_search_history",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "user",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "renewal_date": {
+          "name": "renewal_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "review_date": {
+          "name": "review_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "landlord_id": {
+          "name": "landlord_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "location": {
+          "name": "location",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "type": {
+          "name": "type",
+          "type": "enum('Apartment','House','SharedApartment','SharedHouse')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "enumItems": [
+            "Apartment",
+            "House",
+            "SharedApartment",
+            "SharedHouse"
+          ],
+          "mappedType": "enum"
+        },
+        "status": {
+          "name": "status",
+          "type": "enum('Pending','Approved','Rejected')",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "default": "'Pending'",
+          "enumItems": [
+            "Pending",
+            "Approved",
+            "Rejected"
+          ],
+          "mappedType": "enum"
+        },
+        "cold_rent": {
+          "name": "cold_rent",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "additional_costs": {
+          "name": "additional_costs",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "warm_rent": {
+          "name": "warm_rent",
+          "type": "int",
+          "generated": "(cold_rent + additional_costs) stored",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "deposit": {
+          "name": "deposit",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "availability_from": {
+          "name": "availability_from",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "availability_to": {
+          "name": "availability_to",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "size": {
+          "name": "size",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "integer"
+        },
+        "are_pets_allowed": {
+          "name": "are_pets_allowed",
+          "type": "tinyint(1)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 1,
+          "mappedType": "boolean"
+        },
+        "visits": {
+          "name": "visits",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "default": "0",
+          "mappedType": "integer"
+        },
+        "landlord_questionnaire_id": {
+          "name": "landlord_questionnaire_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "amenities_values": {
+          "name": "amenities_values",
+          "type": "json",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": null,
+          "mappedType": "json"
+        }
+      },
+      "name": "property",
+      "indexes": [
+        {
+          "columnNames": [
+            "landlord_id"
+          ],
+          "composite": false,
+          "keyName": "property_landlord_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "property_landlord_id_foreign": {
+          "constraintName": "property_landlord_id_foreign",
+          "columnNames": [
+            "landlord_id"
+          ],
+          "localTableName": "property",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "user",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "type": {
+          "name": "type",
+          "type": "tinyint",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "enum"
+        },
+        "property_id": {
+          "name": "property_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "length": 36,
+          "mappedType": "string"
+        }
+      },
+      "name": "media_file",
+      "indexes": [
+        {
+          "columnNames": [
+            "property_id"
+          ],
+          "composite": false,
+          "keyName": "media_file_property_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "media_file_property_id_foreign": {
+          "constraintName": "media_file_property_id_foreign",
+          "columnNames": [
+            "property_id"
+          ],
+          "localTableName": "media_file",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "property",
+          "deleteRule": "set null",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "content": {
+          "name": "content",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 255,
+          "mappedType": "string"
+        },
+        "property_id": {
+          "name": "property_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "sender_id": {
+          "name": "sender_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "receiver_id": {
+          "name": "receiver_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "is_read_by_receiver": {
+          "name": "is_read_by_receiver",
+          "type": "tinyint(1)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 1,
+          "mappedType": "boolean"
+        }
+      },
+      "name": "message",
+      "indexes": [
+        {
+          "columnNames": [
+            "property_id"
+          ],
+          "composite": false,
+          "keyName": "message_property_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "sender_id"
+          ],
+          "composite": false,
+          "keyName": "message_sender_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "receiver_id"
+          ],
+          "composite": false,
+          "keyName": "message_receiver_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "message_property_id_foreign": {
+          "constraintName": "message_property_id_foreign",
+          "columnNames": [
+            "property_id"
+          ],
+          "localTableName": "message",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "property",
+          "updateRule": "cascade"
+        },
+        "message_sender_id_foreign": {
+          "constraintName": "message_sender_id_foreign",
+          "columnNames": [
+            "sender_id"
+          ],
+          "localTableName": "message",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "user",
+          "updateRule": "cascade"
+        },
+        "message_receiver_id_foreign": {
+          "constraintName": "message_receiver_id_foreign",
+          "columnNames": [
+            "receiver_id"
+          ],
+          "localTableName": "message",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "user",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "creation_date": {
+          "name": "creation_date",
+          "type": "datetime",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": null,
+          "mappedType": "datetime"
+        },
+        "student_id": {
+          "name": "student_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        },
+        "property_id": {
+          "name": "property_id",
+          "type": "varchar(36)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "length": 36,
+          "mappedType": "string"
+        }
+      },
+      "name": "favorite_property",
+      "indexes": [
+        {
+          "columnNames": [
+            "student_id"
+          ],
+          "composite": false,
+          "keyName": "favorite_property_student_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "property_id"
+          ],
+          "composite": false,
+          "keyName": "favorite_property_property_id_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "favorite_property_student_id_foreign": {
+          "constraintName": "favorite_property_student_id_foreign",
+          "columnNames": [
+            "student_id"
+          ],
+          "localTableName": "favorite_property",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "user",
+          "updateRule": "cascade"
+        },
+        "favorite_property_property_id_foreign": {
+          "constraintName": "favorite_property_property_id_foreign",
+          "columnNames": [
+            "property_id"
+          ],
+          "localTableName": "favorite_property",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "property",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    }
+  ],
+  "nativeEnums": {}
+}

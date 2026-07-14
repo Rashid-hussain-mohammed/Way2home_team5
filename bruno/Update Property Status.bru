@@ -1,0 +1,28 @@
+meta {
+  name: Update Property Status
+  type: http
+  seq: 14
+}
+
+put {
+  url: http://localhost:5000/review/property/c017c2a0-9422-4614-8197-c94434c67759
+  body: json
+  auth: bearer
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMmY1NTE5MC05Yzc0LTRiYzgtYjQyOS1kMGFiNDNmZWM0MmMiLCJlbWFpbCI6Im1vZGVyYXRvckBnbWFpbC5jb20iLCJyb2xlIjoiTW9kZXJhdG9yIiwiaWF0IjoxNzM2MDEyNjE5LCJleHAiOjE3MzYwMTYyMTl9.fPrrT72O5CmS8rpGLhBlugYBQoxomaqSXRAZgFU0U6U
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMmY1NTE5MC05Yzc0LTRiYzgtYjQyOS1kMGFiNDNmZWM0MmMiLCJlbWFpbCI6Im1vZGVyYXRvckBnbWFpbC5jb20iLCJyb2xlIjoiTW9kZXJhdG9yIiwiaWF0IjoxNzM2MDEyNjE5LCJleHAiOjE3MzYwMTYyMTl9.fPrrT72O5CmS8rpGLhBlugYBQoxomaqSXRAZgFU0U6U
+}
+
+body:json {
+  {
+    "status": "Rejected"
+  }
+  
+  
+  
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get media
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{HOST}}/media/:id
+  body: multipartForm
+  auth: none
+}
+
+params:path {
+  id: 2d2c5bb7-a482-4589-81f6-c37f7fd32171
+}

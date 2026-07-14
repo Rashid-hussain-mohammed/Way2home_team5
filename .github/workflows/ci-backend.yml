@@ -1,0 +1,21 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ apps/backend/** ]
+
+jobs:
+  build-and-deploy:
+    name: Test backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check types
+        uses: ./.github/actions/run-node
+        with:
+          service-name: backend
+          command: check-types

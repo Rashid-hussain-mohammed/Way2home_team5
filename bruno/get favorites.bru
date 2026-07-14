@@ -1,0 +1,15 @@
+meta {
+  name: get favorites
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{HOST}}/favorites/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0ZTBkYzYzMC0zZjBlLTRkYmEtYWRjYS0xMTBiNjA0Zjc5OGUiLCJlbWFpbCI6InJvbWluYS5uaWthc2FAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQiLCJpYXQiOjE3MzQ2MzU0MTQsImV4cCI6MTczNDYzOTAxNH0.ElDn_cj2vt03IQDOPV--b6bdPxSV3gine0RKAaFJ-V4
+}

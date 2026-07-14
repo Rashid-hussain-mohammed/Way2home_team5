@@ -1,0 +1,25 @@
+name: Deploy backend
+
+on: workflow_dispatch
+
+env:
+  CI: false # disable treating warnings as errors on CI
+
+jobs:
+  build-and-deploy:
+    name: Build & deploy backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build & deploy service
+        uses: ./.github/actions/build-and-deploy-node
+        with:
+          service-name: backend
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          ssh-key: ${{ secrets.SSH_KEY }}
+          env: "${{ secrets.ENV }}"
+          restart: true

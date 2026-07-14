@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profiles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        button {
+            padding: 20px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #009688;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #00796b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Student Profiles</h1>
+        <div class="profile-grid">
+            <button onclick="window.location.href='DeveloperA.html'">Romina Nikasa Profile</button>
+            <button onclick="window.location.href='rashid.html'">Rashid Hussain Profile</button>
+            <button onclick="window.location.href='DeveloperA.html'">Tim Schröder Profile</button>
+            <button onclick="window.location.href='DeveloperA.html'">Maira Shafi Profile</button>
+            <button onclick="window.location.href='DeveloperA.html'">Anmol Profile</button>
+            <button onclick="window.location.href='DeveloperA.html'">Samarth Mahajan Profile</button>
+            <button onclick="window.location.href='DeveloperA.html'">Suhaila Profile</button>
+        </div>
+    </div>
+
+    <footer>
+        <style>
+            footer {
+                position: fixed;
+                bottom: 5px;
+                left: 5px;
+
+                .text {
+                    font-family: sans-serif;
+                }
+            }
+        </style>
+        <div class="text">
+            Fulda University of Applied Sciences Software Engineering Project, Fall 2024. For Demonstration Only
+        </div>
+    </footer>
+
+</body>
+
+</html>

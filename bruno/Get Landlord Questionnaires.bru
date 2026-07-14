@@ -1,0 +1,19 @@
+meta {
+  name: Get Landlord Questionnaires
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://localhost:5000/questionnaire/landlord/:landlordId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  landlordId: 
+}
+
+auth:bearer {
+  token: 
+}

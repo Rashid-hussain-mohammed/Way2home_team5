@@ -1,0 +1,45 @@
+# dev
+.yarn/
+!.yarn/releases
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/*.code-snippets
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+
+# deps
+node_modules/
+
+# env
+.env
+.env.production
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.turbo
+
+# misc
+.DS_Store
+temp
+
+# dist
+dist
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+.DS_Store
+__MACOSX/
+._*

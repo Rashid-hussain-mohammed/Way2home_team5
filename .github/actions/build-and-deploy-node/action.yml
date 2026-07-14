@@ -1,0 +1,64 @@
+name: Build & deploy node action
+
+inputs:
+  service-name:
+    required: true
+    type: string
+  host:
+    required: true
+    type: string
+  username:
+    required: true
+    type: string
+  ssh-key:
+    required: true
+    type: string
+  env:
+    required: false
+    type: string
+    default: ""
+  restart:
+    required: true
+    type: boolean
+
+runs:
+  using: composite
+  steps:
+    - name: Build common
+      uses: ./.github/actions/run-node
+      with:
+        service-name: "@gdsd/common"
+        command: build-common
+
+    - name: Build
+      uses: ./.github/actions/run-node
+      with:
+        service-name: ${{ inputs.service-name }}
+        command: build
+
+    - name: Create .env file
+      if: "${{ inputs.env != '' }}"
+      shell: bash
+      run: echo "${{ inputs.env }}" | base64 -d > ./apps/${{ inputs.service-name }}/dist/.env
+
+    - name: Copy files via ssh
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ inputs.host }}
+        username: ${{ inputs.username }}
+        key: ${{ inputs.ssh-key }}
+        source: "./apps/${{ inputs.service-name }}/dist/*"
+        target: "~/${{ inputs.service-name }}/"
+        rm: true
+        overwrite: true
+        strip_components: 3
+
+    - name: Restart service
+      if: "${{ inputs.restart == 'true' }}"
+      uses: appleboy/ssh-action@v1.1.0
+      with:
+        host: ${{ inputs.host }}
+        username: ${{ inputs.username }}
+        key: ${{ inputs.ssh-key }}
+        script: |
+          sudo systemctl restart ${{ inputs.service-name }}

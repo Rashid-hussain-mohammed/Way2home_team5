@@ -1,0 +1,19 @@
+meta {
+  name: add to favorites
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{HOST}}/favorites/:propertyId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  propertyId: c83da2a9-3831-4028-bb05-d99d0ec1de1c
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0ZTBkYzYzMC0zZjBlLTRkYmEtYWRjYS0xMTBiNjA0Zjc5OGUiLCJlbWFpbCI6InJvbWluYS5uaWthc2FAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQiLCJpYXQiOjE3MzQ2MzIyOTMsImV4cCI6MTczNDYzNTg5M30._KXp3DeYPmUX6BxkMnIRroo_eCHW6TPRTrLUdEhEgVY
+}

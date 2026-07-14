@@ -1,0 +1,19 @@
+{
+    "extends": "@gdsd/typescript-config/base.json",
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir": "./dist",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+        },
+        "types": [
+            "node"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
